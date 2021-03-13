@@ -16,6 +16,11 @@ public class Linha {
         this.paint = Estilo.getEstilosParaLinha();
     }
 
+    public Linha(Context context, Path path, Paint paint){
+        this.path = path;
+        this.paint = paint;
+    }
+
     public void desenharLinha(Canvas canvas){
         canvas.drawPath(path, paint);
     }
