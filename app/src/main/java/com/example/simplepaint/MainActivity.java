@@ -22,7 +22,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void corVerde(View view) {
-        viewCanvas.limparCanvas();
         viewCanvas.inicializaObjetosVerde();
+    }
+
+    public void estiloLivre(View view) {
+        viewCanvas.inicializaObjetosLivre();
     }
 }

@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 
 public class ViewCanvas extends View {
 
-    private Path path;
+    private Path path = new Path();
     private Bitmap bitmap;
     private Canvas canvas;
     private float eixoX, eixoY;
@@ -26,13 +26,16 @@ public class ViewCanvas extends View {
     }
 
     private void inicializaObjetos(){
-        path = new Path();
         linha = new Linha(getContext(), path);
     }
 
     public void inicializaObjetosVerde(){
-        path = new Path();
         Paint paint = Estilo.getEstiloParaLinhaVerde();
+        linha = new Linha(getContext(), path, paint);
+    }
+
+    public void inicializaObjetosLivre(){
+        Paint paint = Estilo.getEstiloLivre();
         linha = new Linha(getContext(), path, paint);
     }
 
